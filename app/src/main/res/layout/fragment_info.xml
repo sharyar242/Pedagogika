@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/infoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/margin_standard"
+                android:text="@string/about"
+                android:textSize="@dimen/text_normal"
+                android:textAlignment="center"
+                android:fontFamily="@font/times"
+                android:textColor="@color/black"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/juwapliRedaktor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoText"
+                android:text="@string/juwapl_redaktor"
+                android:fontFamily="@font/times"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/margin_eight"
+                />
+
+            <TextView
+                android:id="@+id/juwapliRedaktorTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/juwapliRedaktor"
+                android:text="@string/juwapRedaktorTitle"
+                android:fontFamily="@font/times"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textAlignment="center"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_eight"
+                />
+            <TextView
+                android:id="@+id/recenzentı"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/juwapliRedaktorTitle"
+                android:text="@string/Recenzentı"
+                android:fontFamily="@font/times"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textAlignment="center"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_eight"
+                />
+
+            <TextView
+                android:id="@+id/recenzentıTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recenzentı"
+                android:text="@string/rezedentiTitle"
+                android:fontFamily="@font/times"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textAlignment="center"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_eight"
+                />
+            <TextView
+                android:id="@+id/recenzentıTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recenzentıTitle"
+                android:text="@string/rezedentiTitle2"
+                android:fontFamily="@font/times"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textAlignment="center"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_eight"
+                />
+            <TextView
+                android:id="@+id/juwmaqlaw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recenzentıTitle2"
+                android:text="@string/juwmaqlaw"
+                android:fontFamily="@font/times"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textAlignment="center"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_eight"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dividerInInfoPage"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gold_divider"
+                android:tint="#20B2AA"
+                app:layout_constraintTop_toBottomOf="@id/juwmaqlaw"
+                app:layout_constraintBottom_toTopOf="@id/aboutBookItem"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/margin_standard"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/aboutBookItem"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                app:layout_constraintTop_toBottomOf="@id/dividerInInfoPage"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
+                android:orientation="vertical"
+                android:focusable="true">
+
+                <View
+                    android:id="@+id/aboutBookItemDivider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/aboutBookText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/aboutBookItemDivider1"
+                    app:layout_constraintBottom_toBottomOf="@id/aboutBookItemDivider2"
+                    android:layout_marginStart="@dimen/margin_standard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_standard"
+                    android:text="@string/paydalan_l_an_debiyatlar_dizimi"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/times"
+                    tools:ignore="SpUsage" />
+
+
+                <View
+                    android:id="@+id/aboutBookItemDivider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toBottomOf="@id/aboutBookItem"
+                    android:background="?android:attr/listDivider"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

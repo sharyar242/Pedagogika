@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="@string/bas_bet" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_bookmark_border_24"
+        android:title="Saylandilar" />
+
+    <item
+        android:id="@+id/fragmentAbout"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_info_24"
+        android:title="Maǵlıwmat" />
+
+</menu>
