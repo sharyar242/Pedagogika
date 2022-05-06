@@ -15,8 +15,8 @@ class ThemesFragment : Fragment(R.layout.fragment_themes) {
 
     private var themesAdapter = ThemesAdapter()
     private lateinit var dao: ThemesDao
-    private var mainId1: Int = 1
-    private lateinit var mainName: String
+    private var themesId: Int = 1
+    private lateinit var themesName: String
     private val args: ThemesFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,15 +24,15 @@ class ThemesFragment : Fragment(R.layout.fragment_themes) {
         setHasOptionsMenu(true)
 
         dao = PedagogikaDatabase.getInstance(requireContext()).themesDao()
-        mainId1 = args.mainId
-        mainName = args.mainString
+        themesId = args.themesId
+        themesName = args.themesString
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         themesRecyclerView.adapter = themesAdapter
-        setData(mainId1)
+        setData(themesId)
 
         themesAdapter.setOnThemesItemClickListener { id, title ->
 

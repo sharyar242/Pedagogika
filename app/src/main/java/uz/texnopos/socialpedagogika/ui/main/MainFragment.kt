@@ -38,114 +38,114 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         socPedagKirisiwCard.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[1].id,
-                    mainString = models[1].main)
-                    //main theme bolsada islep tur
+                    themesId = models[1].id,
+                    themesString = models[1].main)
+                //main theme bolsada islep tur
             )
         }
         ozbekistanSharayatlariCard.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[2].id,
-                    mainString = models[2].main)
+                    themesId =models[2].id,
+                    themesString =models[2].main)
             )
         }
         card4.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[3].id,
-                    mainString = models[3].main)
+                    themesId =models[3].id,
+                    themesString =models[3].main)
             )
         }
         card5.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[4].id,
-                    mainString = models[4].main)
+                    themesId =models[4].id,
+                    themesString =models[4].main)
             )
         }
         card6.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[5].id,
-                    mainString = models[5].main)
+                    themesId =models[5].id,
+                    themesString =models[5].main)
             )
         }
         card7.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[6].id,
-                    mainString = models[6].main)
+                    themesId =models[6].id,
+                    themesString =models[6].main)
             )
         }
         card8.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[7].id,
-                    mainString = models[7].main)
+                    themesId =models[7].id,
+                    themesString = models[7].main)
             )
         }
         card9.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[8].id,
-                    mainString = models[8].main)
+                    themesId =models[8].id,
+                    themesString = models[8].main)
             )
         }
         card10.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[9].id,
-                    mainString = models[9].main)
+                    themesId =models[9].id,
+                    themesString = models[9].main)
             )
         }
         card11.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[10].id,
-                    mainString = models[10].main)
+                    themesId =models[10].id,
+                    themesString = models[10].main)
             )
         }
         card12.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[11].id,
-                    mainString = models[11].main)
+                    themesId =models[11].id,
+                    themesString = models[11].main)
             )
         }
         card13.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[12].id,
-                    mainString = models[12].main)
+                    themesId =models[12].id,
+                    themesString =models[12].main)
             )
         }
         card14.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[13].id,
-                    mainString = models[13].main)
+                    themesId =models[13].id,
+                    themesString = models[13].main)
             )
         }
         card15.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[14].id,
-                    mainString = models[14].main)
+                    themesId =models[14].id,
+                    themesString = models[14].main)
             )
         }
         card16.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[15].id,
-                    mainString = models[15].main)
+                    themesId =models[15].id,
+                    themesString =models[15].main)
             )
         }
         card17.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    mainId = models[16].id,
-                    mainString = models[16].main)
+                    themesId =models[16].id,
+                    themesString = models[16].main)
             )
         }
     }
