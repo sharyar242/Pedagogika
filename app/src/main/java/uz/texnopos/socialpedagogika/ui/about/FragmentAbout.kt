@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_info.*
 import uz.texnopos.socialpedagogika.R
 
-class FragmentAbout:Fragment(R.layout.fragment_info) {
+class FragmentAbout : Fragment(R.layout.fragment_info) {
 
     private lateinit var preferences: SharedPreferences
 

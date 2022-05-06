@@ -1,175 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:fontFamily="@font/times"
+                android:text="UO‘K: 316.6(075.8)"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:fontFamily="@font/times"
+                android:text="КBК: 87.6ya73"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text1"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:fontFamily="@font/times"
+                android:text="      S 38"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text2"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:fontFamily="@font/times"
+                android:text="Z.S.Salieva, B.X.Xodjaev,
+                 Z.K.Kurbaniyazova."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:layout_marginEnd="@dimen/margin_standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text3"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:layout_marginEnd="@dimen/margin_standard"
+                android:fontFamily="@font/times"
+                android:text="@string/sociall_q_pedagogika_tn_sabaql_q_z_s_salieva_b_x_xodjaev_z_k_kurbaniyazova_shkent_yosh_avlod_matbaa_2021"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintEnd_toEndOf="@id/infoText"
+                app:layout_constraintStart_toStartOf="@id/infoText"
+                app:layout_constraintTop_toBottomOf="@id/text4"
+                tools:ignore="SpUsage" />
 
             <TextView
                 android:id="@+id/infoText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_margin="@dimen/margin_standard"
-                android:text="@string/about"
-                android:textSize="@dimen/text_normal"
-                android:textAlignment="center"
+                android:layout_marginTop="@dimen/margin_eight"
                 android:fontFamily="@font/times"
+                android:text="@string/about"
+                android:textAlignment="center"
                 android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintTop_toBottomOf="@id/text5"
                 tools:ignore="SpUsage" />
 
             <TextView
                 android:id="@+id/juwapliRedaktor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/infoText"
-                android:text="@string/juwapl_redaktor"
+                android:layout_marginTop="@dimen/margin_eight"
                 android:fontFamily="@font/times"
+                android:text="@string/juwapl_redaktor"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_normal"
-                android:textAlignment="center"
-                android:layout_marginTop="@dimen/margin_eight"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoText" />
 
             <TextView
                 android:id="@+id/juwapliRedaktorTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/juwapliRedaktor"
-                android:text="@string/juwapRedaktorTitle"
-                android:fontFamily="@font/times"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_normal"
-                android:textAlignment="center"
                 android:layout_margin="@dimen/margin_standard"
                 android:layout_marginTop="@dimen/margin_eight"
-                />
+                android:fontFamily="@font/times"
+                android:text="@string/juwapRedaktorTitle"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/juwapliRedaktor" />
+
             <TextView
                 android:id="@+id/recenzentı"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/juwapliRedaktorTitle"
-                android:text="@string/Recenzentı"
-                android:fontFamily="@font/times"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_normal"
-                android:textAlignment="center"
                 android:layout_margin="@dimen/margin_standard"
                 android:layout_marginTop="@dimen/margin_eight"
-                />
+                android:fontFamily="@font/times"
+                android:text="@string/Recenzentı"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/juwapliRedaktorTitle" />
 
             <TextView
                 android:id="@+id/recenzentıTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recenzentı"
-                android:text="@string/rezedentiTitle"
-                android:fontFamily="@font/times"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_normal"
-                android:textAlignment="center"
                 android:layout_margin="@dimen/margin_standard"
                 android:layout_marginTop="@dimen/margin_eight"
-                />
+                android:fontFamily="@font/times"
+                android:text="@string/rezedentiTitle"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recenzentı" />
+
             <TextView
                 android:id="@+id/recenzentıTitle2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recenzentıTitle"
-                android:text="@string/rezedentiTitle2"
-                android:fontFamily="@font/times"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_normal"
-                android:textAlignment="center"
                 android:layout_margin="@dimen/margin_standard"
                 android:layout_marginTop="@dimen/margin_eight"
-                />
+                android:fontFamily="@font/times"
+                android:text="@string/rezedentiTitle2"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recenzentıTitle" />
+
+
             <TextView
                 android:id="@+id/juwmaqlaw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recenzentıTitle2"
-                android:text="@string/juwmaqlaw"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/times"
+                android:text="@string/juwmaqlaw"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_normal"
-                android:textAlignment="center"
-                android:layout_margin="@dimen/margin_standard"
-                android:layout_marginTop="@dimen/margin_eight"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recenzentıTitle2" />
 
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:fontFamily="@font/times"
+                android:text="ISBN 978-9943-7690-9-0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/infoText"
+                app:layout_constraintTop_toBottomOf="@id/juwmaqlaw"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:layout_marginEnd="@dimen/margin_standard"
+                android:fontFamily="@font/times"
+                android:text="© Z.S.Salieva,"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/infoText"
+                app:layout_constraintTop_toBottomOf="@id/text6"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:layout_marginEnd="@dimen/margin_standard"
+                android:fontFamily="@font/times"
+                android:text="B.X.Xodjaev, Z.K.Kurbaniyazova."
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/infoText"
+                app:layout_constraintTop_toBottomOf="@id/text7"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:layout_marginEnd="@dimen/margin_standard"
+                android:fontFamily="@font/times"
+                android:text="© «Yosh avlod matbaa», 2021"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/infoText"
+                app:layout_constraintTop_toBottomOf="@id/text8"
+                tools:ignore="SpUsage" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/dividerInInfoPage"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
                 android:src="@drawable/gold_divider"
                 android:tint="#20B2AA"
-                app:layout_constraintTop_toBottomOf="@id/juwmaqlaw"
                 app:layout_constraintBottom_toTopOf="@id/aboutBookItem"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="@dimen/margin_standard"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text9" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/aboutBookItem"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
-                app:layout_constraintTop_toBottomOf="@id/dividerInInfoPage"
                 android:layout_marginTop="@dimen/margin_standard"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
 
                 android:orientation="vertical"
-                android:focusable="true">
+                app:layout_constraintTop_toBottomOf="@id/dividerInInfoPage">
 
                 <View
                     android:id="@+id/aboutBookItemDivider1"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:background="?android:attr/listDivider" />
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/aboutBookText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_standard"
+                    android:layout_marginEnd="@dimen/margin_standard"
+                    android:fontFamily="@font/times"
+                    android:gravity="center_vertical"
+                    android:text="@string/paydalan_l_an_debiyatlar_dizimi"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="@id/aboutBookItemDivider2"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/aboutBookItemDivider1"
-                    app:layout_constraintBottom_toBottomOf="@id/aboutBookItemDivider2"
-                    android:layout_marginStart="@dimen/margin_standard"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:gravity="center_vertical"
-                    android:layout_marginEnd="@dimen/margin_standard"
-                    android:text="@string/paydalan_l_an_debiyatlar_dizimi"
-                    android:textSize="18dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/times"
                     tools:ignore="SpUsage" />
 
 
@@ -177,8 +318,8 @@
                     android:id="@+id/aboutBookItemDivider2"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    app:layout_constraintBottom_toBottomOf="@id/aboutBookItem"
-                    android:background="?android:attr/listDivider"/>
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toBottomOf="@id/aboutBookItem" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

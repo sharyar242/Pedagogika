@@ -10,7 +10,7 @@ import android.view.View
 import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_simple.*
+import kotlinx.android.synthetic.main.fragment_kirisiw.*
 import uz.texnopos.socialpedagogika.ui.themes.fragment.ThemesFragment
 import uz.texnopos.socialpedagogika.R
 import uz.texnopos.socialpedagogika.Settings
@@ -18,9 +18,9 @@ import uz.texnopos.socialpedagogika.data.PedagogikaDatabase
 import uz.texnopos.socialpedagogika.data.model.Article
 
 
-class KirisiwFragment: Fragment(R.layout.fragment_kirisiw), KirisiwView {
+class KirisiwFragment : Fragment(R.layout.fragment_kirisiw), KirisiwView {
 
-    private lateinit var presenter : KirisiwPresenter
+    private lateinit var presenter: KirisiwPresenter
     private lateinit var settings: Settings
 
 
@@ -31,7 +31,7 @@ class KirisiwFragment: Fragment(R.layout.fragment_kirisiw), KirisiwView {
 
         val dao = PedagogikaDatabase.getInstance(requireContext()).articleDao()
         settings = Settings(requireContext())
-        presenter = KirisiwPresenter(dao,this)
+        presenter = KirisiwPresenter(dao, this)
         presenter.getKirisiwArticle(1)
     }
 
@@ -46,11 +46,6 @@ class KirisiwFragment: Fragment(R.layout.fragment_kirisiw), KirisiwView {
         }
     }
 
-    fun onBackPressed() {
-        ThemesFragment()
-    }
-
-
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_actionbar_with_textsize_changer, menu)
@@ -60,7 +55,7 @@ class KirisiwFragment: Fragment(R.layout.fragment_kirisiw), KirisiwView {
 
 
         return when (item.itemId) {
-         //   androidx.appcompat.R.id.home->
+            //   androidx.appcompat.R.id.home->
 
             R.id.textSizeSettings -> {
                 val view = requireActivity().findViewById<View>(R.id.textSizeSettings)
@@ -70,7 +65,7 @@ class KirisiwFragment: Fragment(R.layout.fragment_kirisiw), KirisiwView {
                 popupMenu.setOnMenuItemClickListener {
                     when (it.itemId) {
                         R.id.smallTextSetting -> {
-                           //  preferences.edit().putFloat(TEXT_SIZE, 14f).apply()
+                            //  preferences.edit().putFloat(TEXT_SIZE, 14f).apply()
                             //shared preference islemiy atir atip ketedi
                             simpleTextTitle.textSize = 14f
                             true

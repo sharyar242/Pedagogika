@@ -22,10 +22,10 @@
     <string name="card16Text">NÁShEBENTLIK – DEVIANT MINEZ-XULİQTİŃ FORMASİ SİPATİNDA</string>
     <string name="glossariy">GLOSSARIY</string>
     <string name="paydalan_l_an_debiyatlar_dizimi1">PAYDALANİLǴAN ÁDEBIYaTLAR DIZIMI</string>
-    <string name="small">Kishi</string>
+    <string name="small">Kıshı</string>
     <string name="normal">Ortasha</string>
-    <string name="large">Ulken</string>
-    <string name="extra_large">Juda ulken</string>
+    <string name="large">Úlken</string>
+    <string name="extra_large">Júda úlken</string>
     <string name="change_text_size">Текст өлшемин өзгертиў</string>
     <string name="bas_bet">Bas bet</string>
     <string name="about">Sabaqlıqta sociallıq pedagogika pánine bolǵan sociallıq buyurpa, Ózbekstan Respublikasında hám shet el mámleketlerinde bul pánniń rawajlanıw tariyxı hám tendenciyaları, onıń mádeniy tariyxıy, sociallıq-huqıqıy shárt-sharayatları, principleri hám kategoriyaları, balanıń sociumda rawajlanıwı, sociallıq pedagogikada “norma”, “normalardan sheginiw” hám “deviaciya” túsinikleri, sociallıq institutlar sıpatında shańaraqlar, máhálleler hám oqıw orınları alıp barılatuǵın social-pedagogikalıq iskerliktiń mazmunı hám metodikaları sıyaqlı máseleler ashıp berilgen. Sabaqlıqtan joqarı pedagogikalıq oqıw orınlarınıń pedagogları, magistrantlar hám talabalar paydalanıwı múmkin.</string>
@@ -34,7 +34,7 @@
     <string name="Recenzentı"><b>Recenzentı:</b></string>
     <string name="rezedentiTitle"><b>A.T. Tilegenov</b> – Ózbekstan Pedagogika ilimleri ilim izertlew institutı Nókis filialı direktorı, pedagogika ilimleriniń kandidatı, úlken ilimiy xızmetker. </string>
     <string name="rezedentiTitle2"><b>M.E. Pazılova</b> – Ájiniyaz atındaǵı Nókis mámleketlik pedagogikalıq institutı Pedagogika kafedrası bıslıǵı, pedagogika ilimleriniń kandidatı, docent.</string>
-    <string name="juwmaqlaw">Ózbekstan Respublikası Joqarı hám orta arnawlı bilimlendiriw ministrligi janındaǵı Muwapıqlastırıwshı keńesi tárepinen 2021-jıl «18» avgust kúngi 356-51-sanlı buyrıǵına muwapıq sabaqlıq sıpatında baspaǵa usınılǵan.</string>
+    <string name="juwmaqlaw">Ózbekstan Respublikası Joqarı hám orta arnawlı bilimlendiriw ministrligi janındaǵı Muwapıqlastırıwshı keńesi tárepinen 2021–jıl «18» avgust kúngi 356–51-sanlı buyrıǵına muwapıq sabaqlıq sıpatında baspaǵa usınılǵan.</string>
     <string name="paydalan_l_an_debiyatlar_dizimi">PAYDALANİLǴAN ÁDEBIYaTLAR DIZIMI</string>
     <string name="aaaa"><b>1.</b> Каримов И.А. Ўзбекистон XXI аср бўсағасида: хавфсизликка таҳдид, барқарорлик шартлари ва тараққиёт кафолатлари – Т.: Ўзбекистон, 1997. – 315б.
         <br><b>2.</b> Мирзиёев Ш.М. “Эркин ва фаровон, демократик Ўзбекистон давлатини мард ва олижаноб халқимиз билан бирга қурамиз” мавзусидаги Ўзбекистон Республикаси Президенти лавозимига киришиш тантанали маросимига бағишланган Олий Мажлис палаталарининг қўшма мажлисидаги нутқи. – Т.: “Ўзбекистон”, 2016. – 56 б.</br>
@@ -73,4 +73,6 @@
         <br><b>37.</b> Jan Storø. Practical social pedagogy: Theories, Values and Tools for Working with Children and Young People. Policy Press, 2013. – 151 p. </br>
         <br><b>38.</b> Inge Bryderup, Peter Moss, Claire Cameron, Stefan Kleipoedszus, Jytte Juul Jensen, Gabriel Eichsteller, Pat Petrie, Janet Boddy, Sylvia Holthoff, Anna Kathrine Frorup, Michael Fielding, Michel VandenbroeckSocial Pedagogy and Working with Children and Young People: Where Care and Education Meet. Jessica Kingsley Publishers, 2011. – 224 p. </br>
         <br><b>39.</b> Kieron Hatton Social Pedagogy in the UK: Theory and Practice. Russel House Publishing, 2013. – 114 p.</br></string>
+    <string name="saylandilarMarks">Saylandilar</string>
+    <string name="sociall_q_pedagogika_tn_sabaql_q_z_s_salieva_b_x_xodjaev_z_k_kurbaniyazova_shkent_yosh_avlod_matbaa_2021"><b>Sociallıq pedagogika</b> [Маtn]: Sabaqlıq / Z.S.Salieva, B.X.Xodjaev, Z.K.Kurbaniyazova. – Тоshkent: «Yosh avlod matbaa», 2021.</string>
 </resources>

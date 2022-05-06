@@ -44,8 +44,7 @@ class ArticleFragment: Fragment(R.layout.fragment_article), ArticleView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       // setHasOptionsMenu(true)
-
+        setHasOptionsMenu(true)
 
         themesDao = PedagogikaDatabase.getInstance(requireContext()).themesDao()
         themesId = safeArgs.themesId
@@ -59,9 +58,8 @@ class ArticleFragment: Fragment(R.layout.fragment_article), ArticleView {
         createDynamicViewsNamaz(article)
     }
 
+
     private lateinit var textView:TextView
-
-
     private fun createDynamicViewsNamaz(article: Article) {
         //////////////Qay jerde text qay jerde suwret ekenin tawip aliw//////////////////
         val textPair: MutableList<Pair<Int, Int>> = mutableListOf()
@@ -141,11 +139,18 @@ class ArticleFragment: Fragment(R.layout.fragment_article), ArticleView {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_actionbar_with_textsize_changer, menu)
     }
+    private fun setFavoriteArticle(id:Int) {
+        article.isFavorite = 1 - article.isFavorite
+        articlesDao.updateArticle(id)
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-//            androidx.appcompat.R.id.home -> {
-//            }
+            R.id.bookmarksItem ->{
+                setFavoriteArticle(themesId)
+                true
+            }
+
             R.id.textSizeSettings -> {
                 val view = requireActivity().findViewById<View>(R.id.textSizeSettings)
                 val popupMenu = PopupMenu(requireContext(), view)

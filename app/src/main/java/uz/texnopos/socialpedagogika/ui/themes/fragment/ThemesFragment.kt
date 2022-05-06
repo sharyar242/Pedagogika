@@ -41,15 +41,14 @@ class ThemesFragment : Fragment(R.layout.fragment_themes) {
 //                    ThemesFragmentDirections.actionThemesFragmentToSimpleFragment(simpleId = id)
 //                )
 //            } else {
-                findNavController().navigate(
-                    ThemesFragmentDirections.actionThemesFragmentToArticleFragment(
-                        themesId = id,
-                        themesName = title)
-                )
-          //  }
+            findNavController().navigate(
+                ThemesFragmentDirections.actionThemesFragmentToArticleFragment(
+                    themesId = id,
+                    themesName = title)
+            )
+            //  }
         }
     }
-
 
 
     private fun setData(id: Int) {

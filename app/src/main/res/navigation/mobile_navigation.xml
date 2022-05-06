@@ -16,13 +16,7 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
-        <action
-            android:id="@+id/action_mainFragment_to_simpleFragment"
-            app:destination="@id/simpleFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+
         <action
             android:id="@+id/action_mainFragment_to_kirisiwFragment"
             app:destination="@id/kirisiwFragment"
@@ -66,14 +60,7 @@
             app:argType="string" />
 
     </fragment>
-    <fragment
-        android:id="@+id/simpleFragment"
-        android:name="uz.texnopos.socialpedagogika.ui.simpleFragment.SimpleFragment"
-        android:label="Sociallıq pedagogika" >
-        <argument
-            android:name="simpleId"
-            app:argType="integer" />
-    </fragment>
+
     <fragment
         android:id="@+id/kirisiwFragment"
         android:name="uz.texnopos.socialpedagogika.ui.kirisiw.KirisiwFragment"
@@ -88,10 +75,28 @@
         android:label="Sociallıq pedagogika" >
         <action
             android:id="@+id/action_fragmentAbout_to_aboutAvtors"
-            app:destination="@id/aboutAvtors" />
+            app:destination="@id/aboutAvtors"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/aboutAvtors"
         android:name="uz.texnopos.socialpedagogika.ui.about.AboutAvtors"
         android:label="Sociallıq pedagogika" />
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="uz.texnopos.socialpedagogika.ui.bookmarks.BookmarksFragment"
+        android:label="BookmarksFragment" >
+        <action
+            android:id="@+id/action_bookmarksFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <argument
+            android:name="bookmarksId"
+            app:argType="integer" />
+        <argument
+            android:name="bookmarkString"
+            app:argType="string" />
+    </fragment>
 </navigation>
