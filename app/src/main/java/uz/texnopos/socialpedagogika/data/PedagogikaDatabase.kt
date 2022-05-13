@@ -9,26 +9,30 @@ import uz.texnopos.socialpedagogika.data.dao.MainDao
 import uz.texnopos.socialpedagogika.data.dao.ThemesDao
 import uz.texnopos.socialpedagogika.data.model.Article
 
-@Database(entities =[Article::class], version = 1)
-
-abstract class PedagogikaDatabase: RoomDatabase() {
+@Database(entities = [Article::class], version = 2)
+abstract class PedagogikaDatabase : RoomDatabase() {
 
     companion object {
         private lateinit var INSTANCE: PedagogikaDatabase
 
-        fun getInstance(context: Context): PedagogikaDatabase {
-            if (!Companion::INSTANCE.isInitialized) {
-                INSTANCE = Room.databaseBuilder(context,
-                    PedagogikaDatabase::class.java, "kitap.db")
-                    .createFromAsset("kitap.db")
-                    .allowMainThreadQueries()
-                    .build()
-            }
-            return INSTANCE
+        fun getInstance(context: Context): PedagogikaDatabase =
+            Room.databaseBuilder(context, PedagogikaDatabase::class.java, "kitap.db")
+                .createFromAsset("kitap.db")
+                .allowMainThreadQueries()
+                .build()
         }
-    }
 
-    abstract fun articleDao(): ArticlesDao
+    abstract fun articlesDao(): ArticlesDao
     abstract fun themesDao(): ThemesDao
     abstract fun mainDao(): MainDao
 }
+
+//            if (!Companion::INSTANCE.isInitialized) {
+//                INSTANCE = Room.databaseBuilder(
+//                    context,
+//                    PedagogikaDatabase::class.java, "kitap.db")
+//                    .createFromAsset("kitap.db")
+//                    .allowMainThreadQueries()
+//                    .build()
+//            }
+//            return INSTANCE

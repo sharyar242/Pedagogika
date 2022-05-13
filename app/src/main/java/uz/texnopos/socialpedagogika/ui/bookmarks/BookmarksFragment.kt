@@ -36,12 +36,12 @@ class BookmarksFragment : Fragment(R.layout.fragment_bookmarks) {
         themesRecyclerView.adapter = bkMarkAdapter
         setData(themesId)
 
-        bkMarkAdapter.setOnBookmarkItemClickListener { bkmarkId, bkmarkName ->
-            findNavController().navigate(
-                BookmarksFragmentDirections.actionBookmarksFragmentToArticleFragment(themesId = bkmarkId,
-                    themesName = bkmarkName)
-            )
-        }
+//        bkMarkAdapter.setOnBookmarkItemClickListener { bkmarkId, bkmarkName ->
+//            findNavController().navigate(
+//                BookmarksFragmentDirections.actionBookmarksFragmentToArticleFragment(themesId = bkmarkId,
+//                    themesName = bkmarkName)
+//            )
+//        }
 
     }
 

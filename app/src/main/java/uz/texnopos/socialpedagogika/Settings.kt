@@ -1,6 +1,8 @@
 package uz.texnopos.socialpedagogika
 
 import android.content.Context
+import android.provider.Settings.Global.getString
+import uz.texnopos.socialpedagogika.data.model.Title
 
 class Settings(context: Context) {
     companion object {
@@ -31,4 +33,5 @@ class Settings(context: Context) {
     fun getTextSize() : Float {
         return prefs.getFloat(TEXT_SIZE, 18f)
     }
+
 }

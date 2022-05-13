@@ -1,4 +1,4 @@
-package uz.texnopos.sociallqpedagogika.core
+package uz.texnopos.socialpedagogika.core
 
 import android.content.Context
 import android.content.res.Resources

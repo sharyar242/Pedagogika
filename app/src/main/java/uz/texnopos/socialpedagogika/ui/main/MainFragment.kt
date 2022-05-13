@@ -4,149 +4,61 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.coroutines.internal.MainDispatcherFactory
 import uz.texnopos.socialpedagogika.R
-import uz.texnopos.socialpedagogika.data.PedagogikaDatabase
-import uz.texnopos.socialpedagogika.data.dao.MainDao
-import uz.texnopos.socialpedagogika.data.model.Article
+import uz.texnopos.socialpedagogika.data.model.Title
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
-    private lateinit var mainDao: MainDao
+    private var adapter = MainAdapter()
 
-    // private lateinit var themesDao: ThemesDao
-    private var models = listOf<Article>()
+    private val array = arrayListOf<Title>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainDao = PedagogikaDatabase.getInstance(requireContext()).mainDao()
-        // themesDao = PedagogikaDatabase.getInstance(requireContext()).themesDao()
-        models = mainDao.getAllMain()
+        array.add(Title(1, getString(R.string.kirisiw)))
+        array.add(Title(2,
+            getString(R.string.social_pedagogikal_q_iskerlik_metodikas_mexanizmleri_h_m_texnologiyas)))
+        array.add(Title(3, getString(R.string.ozberSharayatlari)))
+        array.add(Title(4, getString(R.string.shet_mleketlerde)))
+        array.add(Title(5, getString(R.string.zbestanda_sociall_q_pedagogikan_rawajlan_w_tariyx)))
+        array.add(Title(6, getString(R.string.xal_q_pedagogikas_h_m_islam)))
+        array.add(Title(7, getString(R.string.sociall_q_pedagogika)))
+        array.add(Title(8,
+            getString(R.string.sociall_q_pedagogika_h_m_pedagogikal_q_sociologiyada_norma)))
+        array.add(Title(9,
+            getString(R.string.social_pedagogt_k_siplik_iskerligi_sociall_q_pedagogikan_kategoriyalar)))
+        array.add(Title(10,
+            getString(R.string.sociall_q_pedagogikan_principleri_social_pedagogikal_q_izertlewler)))
+        array.add(Title(11,
+            getString(R.string.social_pedagogikal_q_iskerlik_metodikas_mexanizmleri_h_m_texnologiyas)))
+        array.add(Title(12, getString(R.string.sha_araqlard_tipleri_h)))
+        array.add(Title(13, getString(R.string.qay_rqoml_q_h_m_q_wenderlik)))
+        array.add(Title(14, getString(R.string.m_h_lleler)))
+        array.add(Title(15, getString(R.string.card15Text)))
+        array.add(Title(16, getString(R.string.card16Text)))
+        array.add(Title(17, getString(R.string.glossariy)))
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        onMainItemClick()
+        rvCardTitles.adapter = adapter
+        adapter.models = array.toList()
+        adapter.setOnItemClickListener {
+            if (it.id == 1) {
+                findNavController().navigate(
+                    MainFragmentDirections.actionMainFragmentToKirisiwFragment(it.id))
+            } else {
+                findNavController().navigate(
+                    MainFragmentDirections.actionMainFragmentToThemesFragment(it.id)
+                )
+            }
+        }
     }
 
     private fun onMainItemClick() {
-        kirisiwCard.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToKirisiwFragment(1)
-            )
-        }
-        socPedagKirisiwCard.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId = models[1].id,
-                    themesString = models[1].main)
-                //main theme bolsada islep tur
-            )
-        }
-        ozbekistanSharayatlariCard.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[2].id,
-                    themesString =models[2].main)
-            )
-        }
-        card4.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[3].id,
-                    themesString =models[3].main)
-            )
-        }
-        card5.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[4].id,
-                    themesString =models[4].main)
-            )
-        }
-        card6.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[5].id,
-                    themesString =models[5].main)
-            )
-        }
-        card7.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[6].id,
-                    themesString =models[6].main)
-            )
-        }
-        card8.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[7].id,
-                    themesString = models[7].main)
-            )
-        }
-        card9.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[8].id,
-                    themesString = models[8].main)
-            )
-        }
-        card10.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[9].id,
-                    themesString = models[9].main)
-            )
-        }
-        card11.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[10].id,
-                    themesString = models[10].main)
-            )
-        }
-        card12.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[11].id,
-                    themesString = models[11].main)
-            )
-        }
-        card13.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[12].id,
-                    themesString =models[12].main)
-            )
-        }
-        card14.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[13].id,
-                    themesString = models[13].main)
-            )
-        }
-        card15.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[14].id,
-                    themesString = models[14].main)
-            )
-        }
-        card16.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[15].id,
-                    themesString =models[15].main)
-            )
-        }
-        card17.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToThemesFragment(
-                    themesId =models[16].id,
-                    themesString = models[16].main)
-            )
-        }
+
     }
 }

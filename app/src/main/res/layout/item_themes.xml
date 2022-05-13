@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/kirisiwCard"
+            android:id="@+id/tvTitleCard"
             style="@style/CardView.Light"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/themesTextView"
+                    android:id="@+id/tvTitleText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/margin_standard"
@@ -47,7 +47,5 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

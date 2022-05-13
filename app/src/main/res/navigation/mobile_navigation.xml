@@ -37,14 +37,10 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
-
         <argument
-            android:name="themesId"
-            app:argType="integer" />
-
-        <argument
-            android:name="themesString"
-            app:argType="string" />
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
 
     </fragment>
 
@@ -54,12 +50,13 @@
         android:label="Sociallıq pedagogika">
 
         <argument
-            android:name="themesId"
-            android:defaultValue="1"
+            android:name="id"
+            android:defaultValue="0"
             app:argType="integer" />
         <argument
-            android:name="themesName"
-            app:argType="string" />
+            android:name="type"
+            app:argType="long"
+            android:defaultValue="0L" />
 
     </fragment>
 
@@ -68,8 +65,9 @@
         android:name="uz.texnopos.socialpedagogika.ui.kirisiw.KirisiwFragment"
         android:label="Sociallıq pedagogika">
         <argument
-            android:name="kirisiwId"
-            app:argType="integer" />
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/fragmentAbout"
@@ -83,10 +81,12 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
+
     <fragment
         android:id="@+id/aboutAvtors"
         android:name="uz.texnopos.socialpedagogika.ui.about.AboutAvtors"
         android:label="Sociallıq pedagogika" />
+
     <fragment
         android:id="@+id/bookmarksFragment"
         android:name="uz.texnopos.socialpedagogika.ui.bookmarks.BookmarksFragment"
@@ -101,4 +101,5 @@
             android:name="bookmarkString"
             app:argType="string" />
     </fragment>
+
 </navigation>

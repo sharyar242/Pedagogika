@@ -18,17 +18,15 @@ class BookmarksAdapter: RecyclerView.Adapter<BookmarksAdapter.BookmarkViewHolder
             notifyDataSetChanged()
         }
 
-
     private var onBookmarkItemClick:(bkmarkId :Int,bkmarkName:String) -> Unit={ _ , _ ->}
 
     fun setOnBookmarkItemClickListener(onBookmarkItemClick : (bkmarkId: Int, bkmarkName:String) -> Unit) {
         this.onBookmarkItemClick = onBookmarkItemClick
     }
 
-
     inner class BookmarkViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun populateModel(themes: Article){
-            itemView.themesTextView.text = themes.theme
+            itemView.tvTitleText.text = themes.theme
 
             itemView.setOnClickListener {
                 onBookmarkItemClick.invoke((themes.id+itemId+1).toInt(), themes.theme)

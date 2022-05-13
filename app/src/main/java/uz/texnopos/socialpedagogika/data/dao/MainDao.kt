@@ -8,8 +8,8 @@ import uz.texnopos.socialpedagogika.data.model.Article
 interface MainDao {
 
     @Query("SELECT * FROM tablica1")
-    fun getAllMain():List<Article>
+    fun getAllMain(): List<Article>
 
     @Query("SELECT * FROM tablica1 WHERE id=:id")
-    fun getMainById(id :Int): Article
+    fun getMainById(id: Int): Article
 }

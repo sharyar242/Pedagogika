@@ -8,7 +8,7 @@
         android:title="@string/bas_bet" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/bookmarksFragment"
         android:enabled="true"
         android:icon="@drawable/ic_outline_bookmarks_24"
         android:title="Saylandilar" />

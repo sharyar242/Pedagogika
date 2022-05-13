@@ -9,13 +9,13 @@ import uz.texnopos.socialpedagogika.data.model.Article
 interface ArticlesDao {
 
     @Query("SELECT * FROM tablica1")
-    fun getAllArticles():List<Article>
+    fun getAllArticles(): List<Article>
 
     @Query("SELECT * FROM tablica1 WHERE id=:id")
-    fun getArticleById(id :Int): Article
+    fun getArticleById(id: Int): Article
 
-    @Query("SELECT * FROM tablica1 WHERE is_favorite=:is_favorite")
-    fun getArticleByFav(is_favorite:Int):Article
+    // @Query("SELECT * FROM tablica1 WHERE is_favorite=:is_favorite")
+    //fun getArticleByFav(is_favorite:Int):Article
 
     @Update
     fun updateArticle(id: Int)
