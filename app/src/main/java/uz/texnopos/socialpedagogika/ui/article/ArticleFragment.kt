@@ -36,6 +36,7 @@ class ArticleFragment : Fragment(R.layout.fragment_article), ArticleView {
     private val safeArgs: ArticleFragmentArgs by navArgs()
     private lateinit var article:Article
     private lateinit var articlesDao: ArticlesDao
+    private lateinit var viewModel: ArticleListViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,8 +59,9 @@ class ArticleFragment : Fragment(R.layout.fragment_article), ArticleView {
         topAppBar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.bookmarksItem -> {
-                    setFavoriteArticle(requireActivity().taskId)
-                    true
+                    viewModel.setFavorite(id)
+                   // setFavoriteArticle(requireActivity().taskId)
+                    return@setOnMenuItemClickListener true
                 }
                 R.id.textSizeSettings -> {
                     val view = requireActivity().findViewById<View>(R.id.textSizeSettings)
@@ -100,10 +102,10 @@ class ArticleFragment : Fragment(R.layout.fragment_article), ArticleView {
         }
     }
 
-    private fun setFavoriteArticle(id:Int) {
-        article.isFavorite = 1 - article.isFavorite
-        articlesDao.updateArticle(id)
-    }
+//    private fun setFavoriteArticle(id:Int) {
+//        article.isFavorite = 1 - article.isFavorite
+//        articlesDao.updateArticle(id)
+//    }
 
     override fun setAllArticle(article: Article) {
         createDynamicViewsNamaz(article)

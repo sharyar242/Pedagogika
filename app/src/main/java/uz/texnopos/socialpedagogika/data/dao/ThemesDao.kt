@@ -8,11 +8,11 @@ import uz.texnopos.socialpedagogika.data.model.Article
 interface ThemesDao {
 
     @Query("SELECT * FROM tablica1 WHERE id=:id")
-    fun getAllThemes(id:Int): List<Article>
+    suspend fun getAllThemes(id:Int): List<Article>
 
 
     @Query("SELECT * FROM tablica1 WHERE type=:id")
-    fun getThemesByType(id :Int): List<Article>
+    suspend fun getThemesByType(id :Int): List<Article>
 
 
 

@@ -18,6 +18,7 @@ class BookmarksFragment : Fragment(R.layout.fragment_bookmarks) {
     private var themesId: Int = 1
     private lateinit var themesName: String
     private val args: BookmarksFragmentArgs by navArgs()
+    private lateinit var viewModel: FavoriteListViewModel //by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +34,7 @@ class BookmarksFragment : Fragment(R.layout.fragment_bookmarks) {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
 
+        viewModel.getFavorites()
         themesRecyclerView.adapter = bkMarkAdapter
         setData(themesId)
 
